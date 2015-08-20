@@ -9,7 +9,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": ""
+    "test": "",
+    "start": "node src/index.js"
   },
   "author": "",
   "license": "MIT"
