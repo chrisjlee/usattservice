@@ -5,12 +5,13 @@ var request = require('request'),
     };
 
 (function () {
+    var anchors = hrefs = [];
+
 
     request('http://www.teamusa.org/usa-table-tennis/ratings/usatt-ratings-page', function (error, response, html) {
       if (!error && response.statusCode == 200) {
         var $ = jQuery = cheerio.load(html),
-            anchors = $('a[href^="/~/media/USA_Table_Tennis/Ratings/"]'),
-            hrefs = [];
+            anchors = $('a[href^="/~/media/USA_Table_Tennis/Ratings/"]');
 
             anchors.each(function  () {
                var url = $(this).attr('href');
